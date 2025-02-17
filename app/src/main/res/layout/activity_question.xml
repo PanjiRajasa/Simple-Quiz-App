@@ -1,10 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.QuestionActivity">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="top|center">
+        <TextView
+            android:id="@+id/question_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="normal"
+            tools:text="What country does this flag belong to?"
+            android:gravity="center"/>
+        <ImageView
+            android:id="@+id/flag_image"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/image_flag_placeholder"
+            tools:src="@drawable/palestine"
+            />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_weight="10">
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:minHeight="50dp"
+                android:max="10"
+                android:indeterminate="false"
+                style="?android:attr/progressBarStyleHorizontal"
+                tools:progress="7"/>
+
+            <TextView
+                android:id="@+id/progress_text_view"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                tools:text="0/10"
+                android:textSize="15sp"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center_vertical"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/optionOne_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:textColor="@color/custom_grey_400"
+            android:gravity="center"
+            tools:text="Option 1"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/default_option_border_background"/>
+
+        <TextView
+            android:id="@+id/optionTwo_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:textColor="@color/custom_grey_400"
+            android:gravity="center"
+            tools:text="Option 2"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/default_option_border_background"/>
+
+        <TextView
+            android:id="@+id/optionThree_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:gravity="center"
+            android:textColor="@color/custom_grey_400"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            tools:text="Option 3"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/default_option_border_background"/>
+
+        <TextView
+            android:id="@+id/optionFour_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:textColor="@color/custom_grey_400"
+            android:gravity="center"
+            tools:text="Option 4"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/default_option_border_background"/>
+
+        <Button
+            android:id="@+id/button_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:text="@string/check_placeholder"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/default_option_border_background"
+            tools:ignore="VisualLintButtonSize" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

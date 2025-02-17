@@ -2,8 +2,8 @@ package com.example.simplequizapp.model
 
 data class Question(
     val id: Int,
-    val Question: String,
-    val Image: Int,
+    val question: String,
+    val image: Int,
 //    pilihan ganda
     val optionOne: String,
     val optionTwo: String,
