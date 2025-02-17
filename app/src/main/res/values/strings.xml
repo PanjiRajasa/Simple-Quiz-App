@@ -10,5 +10,6 @@
     <string name="name_placeholder">Name</string>
     <string name="start_placeholder">Start</string>
     <string name="image_flag_placeholder">Image Flag</string>
-    <string name="check_placeholder">Check</string>
+    <string name="check_placeholder">CHECK</string>
+    <string name="finish_placeholder">FINISH</string>
 </resources>
