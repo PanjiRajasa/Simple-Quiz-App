@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
             if ((editTextName).text.isNotEmpty()) {
                 Intent(this@MainActivity, QuestionActivity::class.java).also {
                     startActivity(it)
+                    finish()
                 }
             } else {
                 Toast.makeText(this@MainActivity, "Please enter your name", Toast.LENGTH_LONG).show()
